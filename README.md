@@ -1,3 +1,5 @@
+# Notebook-based documentation for TRamWAy
+
 This project is a rework of **TRamWAy** documentation in the shape of IPython notebooks.
 
 The TRamWAy library is available [elsewhere](https://github.com/DecBayComp/TRamWAy).

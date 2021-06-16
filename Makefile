@@ -9,6 +9,25 @@ datafiles= \
 extrafiles= \
 	    notebooks/locations_only.webm \
 	    notebooks/trajectories.webm
+docfiles= \
+	  docs/locations_only.webm \
+	  docs/trajectories.webm \
+	  docs/tracking_files/tracking_7_0.png \
+	  docs/tracking_files/tracking_10_0.png \
+	  docs/tracking_files/tracking_17_0.png \
+	  docs/tracking_files/tracking_18_0.png \
+	  docs/segmentation_files/segmentation_10_0.png \
+	  docs/segmentation_files/segmentation_12_0.png \
+	  docs/segmentation_files/segmentation_14_0.png \
+	  docs/segmentation_files/segmentation_16_0.png \
+	  docs/segmentation_files/segmentation_18_0.png \
+	  docs/segmentation_files/segmentation_20_0.png \
+	  docs/segmentation_files/segmentation_22_0.png \
+	  docs/segmentation_files/segmentation_31_0.png \
+	  docs/segmentation_files/segmentation_34_0.png \
+	  docs/inference_files/inference_15_0.png \
+	  docs/inference_files/inference_18_0.png \
+	  docs/inference_files/inference_20_0.png
 package_data_file= package_data.tar.bz2
 
 files_to_transfer=$(patsubst notebooks/%,docs/%,$(extrafiles))
@@ -29,7 +48,7 @@ docs/%.md: notebooks/%.ipynb
 		--to markdown $<\
 		--output-dir $(dir $@)
 
-data: $(datafiles) $(localfiles)
+data: $(datafiles) $(extrafiles) $(docfiles)
 	rm -f $(package_data_file) &&\
 	       	tar jcvf $(package_data_file) $^
 

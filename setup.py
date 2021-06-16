@@ -4,6 +4,7 @@ from setuptools import setup
 from hashlib import md5
 from urllib.request import urlretrieve
 import tarfile
+from os import path
 
 setup(
     name = 'tramway-tour',
@@ -27,7 +28,7 @@ setup(
 # get package data
 package_data_filename = 'package_data.tar.bz2'
 package_data_download_link = 'http://dl.pasteur.fr/fop/jo7w4WPq/package_data.tar.bz2'
-package_data_checksum = '30e7dc6507c66cdaf4f87f0efcc6b050'
+package_data_checksum = 'ef501c38bd3ec04e46d78d45b4dfbc10'
 
 def download_and_extract():
     package_data_filepath = package_data_filename

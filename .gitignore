@@ -1,0 +1,29 @@
+# Python
+*.py[cod]
+__pycache__/
+
+# Package
+*.egg
+*.egg-info/
+dist/
+build/
+_build/
+
+# anything hidden should be manually added
+.*
+
+# singularity containers
+*.sif
+
+# credential files
+*.credentials
+
+# others
+*.zip
+*.tar
+*.gz
+*.bz2
+*.tif
+*.webm
+*.rwa
+data/

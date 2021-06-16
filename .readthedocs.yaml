@@ -1,0 +1,12 @@
+version: 2
+
+python:
+        version: 3.8
+        install:
+                - method: pip
+                - requirements: requirements-mkdocs.txt
+
+mkdocs:
+        configuration: mkdocs.yml
+        fail_on_warning: false
+

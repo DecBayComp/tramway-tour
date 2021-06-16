@@ -1,0 +1,11 @@
+--- inference.md	2021-06-15 17:49:26.685794415 +0200
++++ modified-inference.md	2021-06-15 19:55:21.399600944 +0200
+@@ -155,7 +155,7 @@
+ To ensure the inferred potential purely reflects the information carried by the local displacements, and does not derive from the local density, one can initialize the effective potential as a flat landscape with `V0=0`:
+ 
+ 
+-```python
++``` {.python hl_lines="9"}
+ %%time
+ 
+ a, assignment = preset_analyzer()

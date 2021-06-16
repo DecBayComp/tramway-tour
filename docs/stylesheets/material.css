@@ -1,0 +1,7 @@
+table.dataframe th, table.dataframe td {
+	padding: .3rem;
+	font-size: .6rem;
+}
+table.dataframe + p {
+	font-size: .6rem;
+}

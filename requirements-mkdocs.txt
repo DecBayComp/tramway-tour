@@ -1,6 +1,6 @@
 -e .
 #-e git+https://github.com/DecBayComp/TRamWAy
-TRamWAy>=0.6a0
+TRamWAy>=0.6b0
 
 attrs==21.2.0
 backcall==0.2.0

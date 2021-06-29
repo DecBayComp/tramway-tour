@@ -25,12 +25,12 @@ def preset_analyzers(n=2):
     output_args = tuple(analyzers) + (translocations,)
     return output_args
 
-def set_notebook_theme():
-    return
-    import matplotlib as mpl
-    clr = 'white'
-    mpl.rcParams['axes.titlecolor'] = clr
-    mpl.rcParams['axes.labelcolor'] = clr
-    mpl.rcParams['xtick.color'] = clr
-    mpl.rcParams['ytick.color'] = clr
+def set_notebook_theme(theme='light'):
+    if theme == 'dark':
+        import matplotlib as mpl
+        clr = 'white'
+        mpl.rcParams['axes.titlecolor'] = clr
+        mpl.rcParams['axes.labelcolor'] = clr
+        mpl.rcParams['xtick.color'] = clr
+        mpl.rcParams['ytick.color'] = clr
 

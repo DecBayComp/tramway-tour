@@ -50,13 +50,13 @@ def preset_analyzer():
 
     return a, assignment
 
-def set_notebook_theme():
-    return
-    import matplotlib as mpl
-    clr = 'white'
-    mpl.rcParams['text.color'] = clr
-    mpl.rcParams['axes.titlecolor'] = clr
-    mpl.rcParams['axes.labelcolor'] = clr
-    mpl.rcParams['xtick.color'] = clr
-    mpl.rcParams['ytick.color'] = clr
+def set_notebook_theme(theme='light'):
+    if theme == 'dark':
+        import matplotlib as mpl
+        clr = 'white'
+        mpl.rcParams['text.color'] = clr
+        mpl.rcParams['axes.titlecolor'] = clr
+        mpl.rcParams['axes.labelcolor'] = clr
+        mpl.rcParams['xtick.color'] = clr
+        mpl.rcParams['ytick.color'] = clr
 

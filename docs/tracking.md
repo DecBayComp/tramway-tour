@@ -10,8 +10,15 @@ As locations and trajectories correspond to objects in the localization microsco
 
 
 ```python
-from src.tracking import set_notebook_theme
-set_notebook_theme()
+from src.tracking import set_notebook_theme, get_tif_file
+
+# this actually does nothing for *light* themes,
+# and makes a few color adjustements in plots for *dark* themes if requested:
+set_notebook_theme('light')
+
+# the image file is not fetched on install;
+# it is shipped separately because of its size, while only the current document needs it:
+get_tif_file()
 
 from matplotlib import pyplot as plt
 ```

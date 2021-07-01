@@ -61,7 +61,14 @@ a.tesseller = tessellers.Squares
 ### Standard methods
 
 Most methods feature a `resolution` attribute that allows to size the spatial bin.
-These methods are illustrated with and without this attribute explicitly set.
+These methods are illustrated with and without this attribute explicitly set:
+
+* [Square grid](#square-grid)
+* [Hexagonal grid](#hexagonal-grid)
+* [*k*-means](#k-means)
+* [GWR](#gwr)
+* [*k*-d tree](#k-d-tree)
+* [Random mesh](#random)
 
 Beware the name *resolution* may be misleading, as the `resolution` attribute actually reflects the desired size of the spatial bins, instead of the density of bins per space unit. To increase the resolution, the bin size should be decreased, so as the value for the `resolution` attribute, hence the possible confusion.
 
@@ -121,7 +128,7 @@ b.tesseller.mpl.plot(assignment_b, axes=axes[1], title='resolution = 0.05 µm')
     
 
 
-#### K-means
+#### *k*-means
 
 
 ```python
@@ -184,7 +191,7 @@ b.tesseller.mpl.plot(assignment_b, axes=axes[1], title='resolution = 0.05 µm')
 
 Some tessellation methods are not available as wrappers, but as *plugins* instead.
 
-#### kD-tree
+#### *k*-d tree
 
 This method inherits from the quad-tree algorithm in **InferenceMAP**.
 It does not rely on the Euclidean distance to partition the space.

@@ -2,33 +2,33 @@
 
 ## Introduction
 
-**TRamWAy** is a Python library to analyse random walks and infer parameters of their dynamics (or their environment), including diffusivity, drift and potential energy.
-Typical random walks **TRamWAy** was designed for are biomolecule trajectories such as observed using localization microscopy (*e.g.* PALM, STORM) together with *single-particle tracking* (SPT).
+<abbr title="The RAndoM Walk AnalYzer">**TRamWAy**</abbr> is a Python library to analyse random walks and infer parameters of their dynamics (or their environment), including diffusivity, drift and potential energy.
+Typical random walks TRamWAy was designed for are biomolecule trajectories such as observed using localization microscopy (*e.g.* <abbr title="PhotoActivated Localization Microscopy">PALM</abbr>, <abbr title="STochastic Optical Reconstruction Microscopy">STORM</abbr>) together with *single-particle tracking* (SPT).
 
-In **TRamWAy**, the flagship approach for characterizing the dynamics of biomolecules (or *random walkers*) and their environment relies on the *mapping hypothesis* and merely considers random walkers as probes of their environment.
+In TRamWAy, the flagship approach for characterizing the dynamics of biomolecules (or *random walkers*) and their environment relies on the *mapping hypothesis* and merely considers random walkers as probes of their environment.
 This is suitable in situations where consistencies in the dynamics may be resolved as a function of space and time, rather than within each random walker.
 
 As a consequence, the library is organised around the following processing steps:
 
-* [tracking](tracking.md) the biomolecules in localization microscopy data ; this is described in a [section](tracking.md) that covers the following modules:
+* [tracking](tracking.ipynb) the biomolecules in localization microscopy data ; this is described in a [section](tracking.md) that covers the following modules:
     * `tramway.analyzer.images`
     * `tramway.analyzer.tracker`
     
-* [segmenting](segmentation.md) in space (and - optionally - time), and assigning individual displacements (or trajectories) to the different segments (also referred to as *bins* or *cells* or *microdomains*) ; the dedicated [section](segmentation.md) covers the following modules:
+* [segmenting](segmentation.ipynb) in space (and - optionally - time), and assigning individual displacements (or trajectories) to the different segments (also referred to as *bins* or *cells* or *microdomains*) ; the dedicated [section](segmentation.ipynb) covers the following modules:
     * `tramway.analyzer.tesseller`
     * `tramway.analyzer.time`
     * `tramway.analyzer.sampler`
     
-* [inferring](inference.md) dynamics parameters in each bin or segment, thus yielding a spatial (or spatio-temporal) map for each parameter ; this is demonstrated together with the following modules:
+* [inferring](inference.ipynb) dynamics parameters in each bin or segment, thus yielding a spatial (or spatio-temporal) map for each parameter ; this is demonstrated together with the following modules:
     * `tramway.analyzer.mapper`
     * `tramway.analyzer.browser`
     
 * identifying patterns in (or *features* of) the parameter maps, including [Bayes factor](https://tramway.readthedocs.io/en/latest/inference.html#inference-bayes-factor) calculation for distinguishing between interactions and spurious forces.
 
-In addition, **TRamWAy** also features a range of widely-used measurements for individual trajectories.
+In addition, TRamWAy also features a range of widely-used measurements for individual trajectories.
 Several analysis procedures based on models that rely on consistencies within each random walker are planned and should be available in future releases.
 
-**TRamWAy** also includes adapted visualisation routines.
+TRamWAy also includes adapted visualisation routines.
 
 ## Example data illustrated
 
@@ -21789,10 +21789,18 @@ hBBCCCFCTgJAQgghhBBCCCGEECH3/wNHfkL0Dn0ljQAAAABJRU5ErkJggg==\
 * The [original documentation](https://tramway.readthedocs.io/en/latest/#where-to-start) with:
     * the [installation](https://tramway.readthedocs.io/en/latest/installation.html) procedure,
     * the [library reference](https://tramway.readthedocs.io/en/latest/tramway.analyzer.html).
+* Code examples and figures in this documentation, merely:
+    * [models](inference.ipynb#models-for-random-walks) to be inferred, with example [diffusivity maps](inference.ipynb#example-diffusivity-maps), [drift maps](inference.ipynb#example-drift-maps) and [potential maps](inference.ipynb#example-potential-maps),
+    * [tessellation algorithms](segmentation.ipynb#tessellating) for the spatial segmentation, including [quadtree](segmentation.ipynb#kd-tree), [hexagons](segmentation.ipynb#hexagonal-grid) and [k-means](segmentation.ipynb#k-means).
 * The [RWAnalyzer tour](https://mybinder.org/v2/gh/DecBayComp/TRamWAy/7c5226bab7ab6a7acaeb3ed51b4f44f29dd7159c?filepath=notebooks%2FRWAnalyzer%20tour.ipynb) series of tutorials.
 
 ## Licenses
 
-The code of the **TRamWAy** library is distributed under the [CeCILL license](https://tramway.readthedocs.io/en/latest/license.html#license) and is available on [GitHub](https://github.com/DecBayComp/TRamWAy).
+The source code of the TRamWAy library is distributed under the [CeCILL license](https://tramway.readthedocs.io/en/latest/license.html#license) and is available on [GitHub](https://github.com/DecBayComp/TRamWAy).
 
 This documentation and - more importantly - the code examples in this documentation are distributed under the [Zero-Clause BSD license](https://github.com/DecBayComp/tramway-tour/-/blob/master/LICENSE) and are also available on [GitHub](https://github.com/DecBayComp/tramway-tour).
+
+
+```python
+
+```

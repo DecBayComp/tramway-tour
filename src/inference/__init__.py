@@ -60,3 +60,29 @@ def set_notebook_theme(theme='light'):
         mpl.rcParams['xtick.color'] = clr
         mpl.rcParams['ytick.color'] = clr
 
+def reload_movies():
+    dv_t = RWAnalyzer()
+
+    dv_t.spt_data.from_rwa_file('../data/Image_traj.rwa')
+    dv_t.spt_data.frame_interval = .04  # in s
+    dv_t.spt_data.localization_precision = .02  # in µm
+
+    dv_t.roi.from_ascii_files() # default filepath will be '../data/Image_traj-roi.txt'
+
+    dv_t.tesseller = tessellers.KMeans
+    dv_t.tesseller.resolution = .1  # in µm
+
+    dv_t.time = time.SlidingWindow(duration=60, shift=30)
+
+    dv_t.sampler = sampler.Knn(10)
+
+    dv_t.mapper = models.DV(start='stochastic')
+
+    sampling_label = lambda roi_label: roi_label + ' - kmeans + 60s window'
+    map_label = 'dv maps'
+
+    r = single(dv_t.roi)
+    assignment_t = r.get_sampling(sampling_label)
+    dv_t_maps = assignment_t.get_child(map_label)
+
+    return dv_t_maps

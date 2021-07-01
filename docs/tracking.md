@@ -5,7 +5,11 @@ This notebook partially covers the following modules:
 * `tramway.analyzer.tracker`
 
 ***
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DecBayComp/tramway-tour/HEAD?filepath=notebooks%2Ftracking.ipynb)
+
+<p style="text-align: center;"><a href="https://mybinder.org/v2/gh/DecBayComp/tramway-tour/HEAD?filepath=notebooks%2Ftracking.ipynb">
+<img alt="Binder" src="https://mybinder.org/badge_logo.svg" />
+</a></p>
+
 ***
 
 **TRamWAy** features a single [tracking algorithm](#Tracking) to identify trajectories among localization data points.
@@ -647,4 +651,7 @@ a.images.to_color_movie(output_file='trajectories.webm',
 
 
 ***
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DecBayComp/tramway-tour/HEAD?filepath=notebooks%2Ftracking.ipynb)
+
+<p style="text-align: center;"><a href="https://mybinder.org/v2/gh/DecBayComp/tramway-tour/HEAD?filepath=notebooks%2Ftracking.ipynb">
+<img alt="Binder" src="https://mybinder.org/badge_logo.svg" />
+</a></p>

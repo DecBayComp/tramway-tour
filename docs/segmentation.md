@@ -10,7 +10,11 @@ which requires the corresponding inference procedures to jointly apply to all th
 Here, the terms *microdomain*, *cell* and *bin* are used interchangeably.
 
 ***
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DecBayComp/tramway-tour/HEAD?filepath=notebooks%2Fsegmentation.ipynb)
+
+<p style="text-align: center;"><a href="https://mybinder.org/v2/gh/DecBayComp/tramway-tour/HEAD?filepath=notebooks%2Fsegmentation.ipynb">
+<img alt="Binder" src="https://mybinder.org/badge_logo.svg" />
+</a></p>
+
 ***
 
 This notebook focuses on the `RWAnalyzer` class and its `tesseller`, `time` and `sampler` attributes,
@@ -592,4 +596,7 @@ a.time.get_spatial_segmentation(spatiotemporal_assignment)
 
 
 ***
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DecBayComp/tramway-tour/HEAD?filepath=notebooks%2Fsegmentation.ipynb)
+
+<p style="text-align: center;"><a href="https://mybinder.org/v2/gh/DecBayComp/tramway-tour/HEAD?filepath=notebooks%2Fsegmentation.ipynb">
+<img alt="Binder" src="https://mybinder.org/badge_logo.svg" />
+</a></p>

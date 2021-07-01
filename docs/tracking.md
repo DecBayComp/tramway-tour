@@ -4,6 +4,10 @@ This notebook partially covers the following modules:
 * `tramway.analyzer.images`
 * `tramway.analyzer.tracker`
 
+***
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DecBayComp/tramway-tour/HEAD?filepath=notebooks%2Ftracking.ipynb)
+***
+
 **TRamWAy** features a single [tracking algorithm](#Tracking) to identify trajectories among localization data points.
 
 As locations and trajectories correspond to objects in the localization microscopy images, this notebook also shows how to visualize both types of data, generating movies (see [1](#Movie-with-overlaid-locations) and [2](#Resulting-movie-with-overlaid-trajectories)).
@@ -641,3 +645,6 @@ a.images.to_color_movie(output_file='trajectories.webm',
 
     skipping
 
+
+***
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DecBayComp/tramway-tour/HEAD?filepath=notebooks%2Ftracking.ipynb)

@@ -10,16 +10,16 @@ This is suitable in situations where consistencies in the dynamics may be resolv
 
 As a consequence, the library is organised around the following processing steps:
 
-* [tracking](tracking.ipynb) the biomolecules in localization microscopy data ; this is described in a [section](tracking.md) that covers the following modules:
+* [tracking](tracking.md) the biomolecules in localization microscopy data ; this is described in a [section](tracking.md) that covers the following modules:
     * `tramway.analyzer.images`
     * `tramway.analyzer.tracker`
     
-* [segmenting](segmentation.ipynb) in space (and - optionally - time), and assigning individual displacements (or trajectories) to the different segments (also referred to as *bins* or *cells* or *microdomains*) ; the dedicated [section](segmentation.ipynb) covers the following modules:
+* [segmenting](segmentation.md) in space (and - optionally - time), and assigning individual displacements (or trajectories) to the different segments (also referred to as *bins* or *cells* or *microdomains*) ; the dedicated [section](segmentation.md) covers the following modules:
     * `tramway.analyzer.tesseller`
     * `tramway.analyzer.time`
     * `tramway.analyzer.sampler`
     
-* [inferring](inference.ipynb) dynamics parameters in each bin or segment, thus yielding a spatial (or spatio-temporal) map for each parameter ; this is demonstrated together with the following modules:
+* [inferring](inference.md) dynamics parameters in each bin or segment, thus yielding a spatial (or spatio-temporal) map for each parameter; this is demonstrated together with the following modules:
     * `tramway.analyzer.mapper`
     * `tramway.analyzer.browser`
     
@@ -21790,8 +21790,8 @@ hBBCCCFCTgJAQgghhBBCCCGEECH3/wNHfkL0Dn0ljQAAAABJRU5ErkJggg==\
     * the [installation](https://tramway.readthedocs.io/en/latest/installation.html) procedure,
     * the [library reference](https://tramway.readthedocs.io/en/latest/tramway.analyzer.html).
 * Code examples and figures in this documentation, merely:
-    * [models](inference.ipynb#models-for-random-walks) to be inferred, with example [diffusivity maps](inference.ipynb#example-diffusivity-maps), [drift maps](inference.ipynb#example-drift-maps) and [potential maps](inference.ipynb#example-potential-maps),
-    * [tessellation algorithms](segmentation.ipynb#tessellating) for the spatial segmentation, including [quadtree](segmentation.ipynb#kd-tree), [hexagons](segmentation.ipynb#hexagonal-grid) and [k-means](segmentation.ipynb#k-means).
+    * [models](inference.md#models-for-random-walks) to be inferred, with example [diffusivity maps](inference.md#example-diffusivity-maps), [drift maps](inference.md#example-drift-maps) and [potential maps](inference.md#example-potential-maps),
+    * [tessellation algorithms](segmentation.md#tessellating) for the spatial segmentation, including [quadtree](segmentation.md#k-d-tree), [hexagons](segmentation.md#hexagonal-grid) and [k-means](segmentation.md#k-means).
 * The [RWAnalyzer tour](https://mybinder.org/v2/gh/DecBayComp/TRamWAy/7c5226bab7ab6a7acaeb3ed51b4f44f29dd7159c?filepath=notebooks%2FRWAnalyzer%20tour.ipynb) series of tutorials.
 
 ## Licenses

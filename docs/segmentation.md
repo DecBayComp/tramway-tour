@@ -9,6 +9,10 @@ which requires the corresponding inference procedures to jointly apply to all th
 
 Here, the terms *microdomain*, *cell* and *bin* are used interchangeably.
 
+***
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DecBayComp/tramway-tour/HEAD?filepath=notebooks%2Fsegmentation.ipynb)
+***
+
 This notebook focuses on the `RWAnalyzer` class and its `tesseller`, `time` and `sampler` attributes,
 together with the modules of same names.
 All of these symbols are exported by the `tramway.analyzer` package.
@@ -193,7 +197,7 @@ Some tessellation methods are not available as wrappers, but as *plugins* instea
 
 #### *k*-d tree
 
-This method inherits from the quad-tree algorithm in **InferenceMAP**.
+This method inherits from the quad-tree algorithm in [**InferenceMAP**](https://research.pasteur.fr/en/software/inferencemap/).
 It does not rely on the Euclidean distance to partition the space.
 
 
@@ -586,3 +590,6 @@ a.time.get_spatial_segmentation(spatiotemporal_assignment)
     <tramway.tessellation.kmeans.KMeansMesh at 0x7f829b4987c0>
 
 
+
+***
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/DecBayComp/tramway-tour/HEAD?filepath=notebooks%2Fsegmentation.ipynb)

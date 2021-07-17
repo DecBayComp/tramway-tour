@@ -1,4 +1,4 @@
-site_name: TRamWAy doc v0.2
+site_name: TRamWAy doc v0.3
 
 repo_url: https://github.com/DecBayComp/tramway-tour
 
@@ -9,6 +9,7 @@ nav:
   - Inference: inference.md
   - More:
       - ROI: roi.md
+      - Scalability: scalability.md
 
 theme:
   name: material

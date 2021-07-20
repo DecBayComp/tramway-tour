@@ -86,3 +86,35 @@ class Maestro(SingularitySlurm):
         return 'module load singularity'
         
 ```
+
+### User-defined inference functions
+
+In the case of user-defined functions passed to the `mapper` attribute as callable plugins, if these functions require extra dependencies that cannot be found in the default TRamWAy Singularity container, the `SingularitySlurm` environment (specifically) may crash unless provided with a properly augmented container.
+
+A recipe can be found at https://github.com/DecBayComp/TRamWAy/blob/master/containers/tramway-hpc.
+
+* edit the recipe to include the additional dependencies (see also https://github.com/DecBayComp/TRamWAy/blob/master/containers/available_images.rst for a list of included Python packages),
+* build a container with the `singularity build` command, *e.g.*:
+    ``singularity build --fakeroot my_container.sif my_recipe.txt``
+* copy the container file onto the remote host, preferably at your `$HOME` root directory,
+* specify which container to use in your Python script:
+
+
+```python
+from tramway.analyzer import *
+
+a = RWAnalyzer()
+
+# ...
+
+# import libraries for my_func
+
+def my_func(*args):
+    pass
+
+a.mapper = mapper.MapperPlugin(my_func)
+
+a.env = environments.Maestro # or any other SingularitySlurm specialization
+# a.env.script = 'scalability.ipynb' # passing the current notebook's name is required from an IPython notebook
+a.env.container = 'my_container.sif' # path relative to your $HOME directory on the remote host
+```

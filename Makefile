@@ -34,7 +34,8 @@ pages: $(md_pages) $(patches)
 docs/%.md: notebooks/%.ipynb
 	jupyter nbconvert\
 		--to markdown $<\
-		--output-dir $(dir $@)
+		--output-dir $(dir $@) &&\
+	rm -rf docs/*-*
 
 data: $(datafiles) $(extrafiles) $(docfiles)
 	rm -f $(package_data_file) &&\

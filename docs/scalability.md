@@ -1,6 +1,6 @@
 # Scalability
 
-While the inference stage is the most common computational bottleneck, localization microscopy data often come as multiple files of wide-field images that exhibit the fluorescent biomolecule spatially distributed as spots that can be selectively targeted as [regions of interest](roi.ipynb) for analysis.
+While the inference stage is the most common computational bottleneck, localization microscopy data often come as multiple files of wide-field images that exhibit the fluorescent biomolecule spatially distributed as spots that can be selectively targeted as [regions of interest](roi.md) for analysis.
 
 TRamWAy features a few building blocks to conveniently implement the segmentation and inference stages, and optionally move the corresponding computations onto a remote high-performace computing (HPC) cluster.
 
@@ -95,7 +95,7 @@ A recipe can be found at https://github.com/DecBayComp/TRamWAy/blob/master/conta
 
 * edit the recipe to include the additional dependencies (see also https://github.com/DecBayComp/TRamWAy/blob/master/containers/available_images.rst for a list of included Python packages),
 * build a container with the `singularity build` command, *e.g.*:
-    ``singularity build --fakeroot my_container.sif my_recipe.txt``
+    ``singularity build --fakeroot my_container.sif my_recipe``
 * copy the container file onto the remote host, preferably at your `$HOME` root directory,
 * specify which container to use in your Python script:
 
@@ -117,4 +117,19 @@ a.mapper = mapper.MapperPlugin(my_func)
 a.env = environments.Maestro # or any other SingularitySlurm specialization
 # a.env.script = 'scalability.ipynb' # passing the current notebook's name is required from an IPython notebook
 a.env.container = 'my_container.sif' # path relative to your $HOME directory on the remote host
+```
+
+### Standard containers
+
+Standard Singularity image files (*.sif*) are named `tramway-hpc-YYMMDD.sif`, with `YYMMDD` reflecting the date the file was generated.
+
+These files are shared for a limited time using a big file sharing service at [dl.pasteur.fr](http://dl.pasteur.fr), and manually listed in the global dictionnary `tramway.analyzer.env.containers.singularity_containers`.
+
+As a consequence, anyone may upload a container image file so that it can be downloaded from a designated url, and append the filename and corresponding url to the dictionnary, as an alternative to manually transferring the file onto remote worker hosts.
+
+Note that containers are to be registered with the local instance of TRamWAy only. On remote workers, every TRamWAy instance already runs within such a container and should not try to call any container or even carry out introspection about the container it lives in.
+
+
+```python
+
 ```

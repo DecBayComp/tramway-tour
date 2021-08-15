@@ -1,6 +1,9 @@
 # Notebook-based documentation for TRamWAy
 
+Website: [tramway-tour.readthedocs.io](https://tramway-tour.readthedocs.io)
+
 This project is a rework of **TRamWAy** documentation in the shape of IPython notebooks.
+The content of this new [documentation website](https://tramway-tour.readthedocs.io) and that of the original [documentation](https://tramway.readthedocs.io) are more complimentary than redundant.
 
 The TRamWAy library is available [elsewhere](https://github.com/DecBayComp/TRamWAy).
 

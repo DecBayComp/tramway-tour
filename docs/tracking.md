@@ -302,6 +302,9 @@ a.images.to_color_movie(output_file='locations_only.webm',
                      magnification='2x', markersize=4, playback_rate=.2)
 ```
 
+    OpenCV: FFMPEG: tag 0x30385056/'VP80' is not supported with codec id 139 and format 'webm / WebM'
+
+
 
 ```python
 from IPython.display import Video
@@ -570,6 +573,9 @@ a.images.to_color_movie(output_file='trajectories.webm',
                         trajectories=cropped_traj,
                         magnification='2x', markersize=3, playback_rate=.2)
 ```
+
+    OpenCV: FFMPEG: tag 0x30385056/'VP80' is not supported with codec id 139 and format 'webm / WebM'
+
 
 Note that we set a same `loc_offset` for all the image stacks because we actually have a single files.
 Different image files may exhibit different offsets, and we would rather loop over `a.images` to set `loc_offset` on a per-image basis.

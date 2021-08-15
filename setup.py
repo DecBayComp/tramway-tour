@@ -28,7 +28,7 @@ setup(
 # get package data
 package_data_filename = 'package_data.tar.bz2'
 package_data_download_link = 'http://dl.pasteur.fr/fop/jo7w4WPq/package_data.tar.bz2'
-package_data_checksum = 'dddf23009687559fbe912ad8a3515b4c'
+package_data_checksum = '7ef509c9691661e74f405d59cadcc3a1'
 
 def download_and_extract():
     package_data_filepath = package_data_filename

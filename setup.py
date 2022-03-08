@@ -23,11 +23,13 @@ setup(
     package_data = {
         'src': ['data/*.tif', 'data/*.txt', 'data/*.rwa', 'notebooks/*.webm'],
         },
+    install_requires = ['tramway[full]'],
 )
 
 # get package data
 package_data_filename = 'package_data.tar.bz2'
 package_data_download_link = 'http://dl.pasteur.fr/fop/jo7w4WPq/package_data.tar.bz2'
+package_data_download_link = 'https://gitlab.pasteur.fr/flaurent/tramway-artefacts/-/raw/main/doc/package_data.tar.bz2?inline=false'
 package_data_checksum = '7ef509c9691661e74f405d59cadcc3a1'
 
 def download_and_extract():

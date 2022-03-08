@@ -1,6 +1,7 @@
 # Tracking
 
 This notebook partially covers the following modules:
+
 * `tramway.analyzer.images`
 * `tramway.analyzer.tracker`
 
@@ -12,13 +13,13 @@ This notebook partially covers the following modules:
 
 ***
 
-**TRamWAy** features a single [tracking algorithm](#Tracking) to identify trajectories among localization data points.
+**TRamWAy** features a single [tracking algorithm](#Tracking) to identify trajectories among localization data points. This algorithm is based on [Jaqaman, K., Loerke, D., Mettlen, M. et al. Robust single-particle tracking in live-cell time-lapse sequences. *Nat Methods* 5, 695–702 (2008)](https://doi.org/10.1038/nmeth.1237).
 
 As locations and trajectories correspond to objects in the localization microscopy images, this notebook also shows how to visualize both types of data, generating movies (see [1](#Movie-with-overlaid-locations) and [2](#Resulting-movie-with-overlaid-trajectories)).
 
 
 ```python
-from src.tracking import set_notebook_theme, get_tif_file
+from src.tracking import set_notebook_theme, get_tif_file, project_dir
 
 # this actually does nothing for *light* themes,
 # and makes a few color adjustements in plots for *dark* themes if requested:
@@ -35,7 +36,7 @@ from matplotlib import pyplot as plt
 
 Prior to tracking localization microscopy data, one may want to confront the localization data with the raw images, if available.
 
-To do so, we first need to register the images with the location coordinate system, adjusting the offset in pixels.
+To do so, we first need to register the images with the location coordinate system, and then we will adjust the offset in pixels.
 
 ### Offset adjustment
 
@@ -47,7 +48,7 @@ import numpy as np
 
 a = RWAnalyzer()
 
-a.images = images.from_tiff_file('../data/Image_8bit.tif')
+a.images = images.from_tiff_file(project_dir / 'data/Image_8bit.tif') # BinderHub messes with project_dir
 a.images.pixel_size = .155 # in µm
 
 a.spt_data = spt_data.from_ascii_file('../data/Image_loc.txt')

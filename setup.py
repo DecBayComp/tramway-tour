@@ -8,7 +8,7 @@ from os import path
 
 setup(
     name = 'tramway-tour',
-    version = '0.4',
+    version = '0.4.1',
     description = 'Notebook-based documentation for TRamWAy',
     url = 'https://github.com/DecBayComp/tramway-tour',
     author = 'Institut Pasteur, François Laurent',
@@ -25,6 +25,7 @@ setup(
         'src.tracking',
         'src.segmentation',
         'src.inference',
+        'src.data',
     ],
     package_data = {
         'src': ['data/*.tif', 'data/*.txt', 'data/*.rwa', 'notebooks/*.webm'],

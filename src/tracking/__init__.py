@@ -16,6 +16,6 @@ def get_tif_file():
     import os
     from urllib.request import urlretrieve
     if not local_tif_file.exists():
-        os.makedirs(project_dir, exist_ok=True) # for BinderHub env.
+        os.makedirs(os.path.dirname(local_tif_file), exist_ok=True) # for BinderHub env.
         urlretrieve(tif_file_url, str(local_tif_file))
 

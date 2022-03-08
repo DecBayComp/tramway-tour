@@ -13,7 +13,9 @@ local_tif_file = project_dir / 'data/Image_8bit.tif'
 tif_file_url = 'http://dl.pasteur.fr/fop/T4wlbsWA/Image_8bit.tif'
 
 def get_tif_file():
+    import os
     from urllib.request import urlretrieve
     if not local_tif_file.exists():
+        os.makedirs(project_dir, exist_ok=True) # for BinderHub env.
         urlretrieve(tif_file_url, str(local_tif_file))
 

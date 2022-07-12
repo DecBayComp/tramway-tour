@@ -10,7 +10,7 @@ def set_notebook_theme(theme='light'):
         mpl.rcParams['ytick.color'] = clr
 
 local_tif_file = project_dir / 'data/Image_8bit.tif'
-tif_file_url = 'http://dl.pasteur.fr/fop/T4wlbsWA/Image_8bit.tif'
+tif_file_url = 'http://dl.pasteur.fr/fop/E9bLwkZ5/Image_8bit.tif'
 
 def get_tif_file():
     import os

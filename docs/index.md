@@ -21748,7 +21748,7 @@ Ak4CQEIIIYQQQgghhBABJwEgIYQQQgghhBBCiID7/wGOWP1l7XtbFwAAAABJRU5ErkJggg==\
 * Code examples and figures in this documentation, merely:
     * [models](inference.md#models-for-random-walks) to be inferred, with example [diffusivity maps](inference.md#example-diffusivity-maps), [drift maps](inference.md#example-drift-maps) and [potential maps](inference.md#example-potential-maps),
     * [tessellation algorithms](segmentation.md#tessellating) for the spatial segmentation, including [quadtree](segmentation.md#k-d-tree), [hexagons](segmentation.md#hexagonal-grid) and [k-means](segmentation.md#k-means).
-* The [RWAnalyzer tour](https://mybinder.org/v2/gh/DecBayComp/TRamWAy/7c5226bab7ab6a7acaeb3ed51b4f44f29dd7159c?filepath=notebooks%2FRWAnalyzer%20tour.ipynb) series of tutorials (also to be found on [GitHub](https://github.com/DecBayComp/TRamWAy/tree/master/notebooks)).
+* The [RWAnalyzer tour](https://mybinder.org/v2/gh/DecBayComp/TRamWAy/HEAD?labpath=notebooks%2FRWAnalyzer%20tour.ipynb) series of tutorials (also to be found on [GitHub](https://github.com/DecBayComp/TRamWAy/tree/master/notebooks)).
 
 ## Licenses
 
